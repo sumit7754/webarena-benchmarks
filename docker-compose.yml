@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  real-site-1:
+    image: httpd:2.4
+    ports:
+      - "8000:80"
+    volumes:
+      - ./environment_docker/html/site1:/usr/local/apache2/htdocs/
+
+  real-site-2:
+    image: httpd:2.4
+    ports:
+      - "8001:80"
+    volumes:
+      - ./environment_docker/html/site2:/usr/local/apache2/htdocs/
+
+  real-site-3:
+    image: httpd:2.4
+    ports:
+      - "8002:80"
+    volumes:
+      - ./environment_docker/html/site3:/usr/local/apache2/htdocs/
